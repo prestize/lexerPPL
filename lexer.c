@@ -123,18 +123,17 @@ void deli_bracks(){
 }
 /*
 void comments(){
-    bool isSingle = true;
-
+    
     if(ch == '#'){
-        int index = 0;
+
         pos = ftell(code);
 
-        while(temp != '\n'){
-           temp = fgetc(code);
-           buffer[index] = temp;
-           index++;
+        printf("\n%c", ch);
+
+        for(int i=0;temp[i]!='\n';i++){
+           temp[i] = fgetc(code);
         }
-        printf("%s singleComment", buffer);
+        printf("%s singleComment", temp);
     }
 }
 
